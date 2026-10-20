@@ -38,3 +38,5 @@ class TrainingConfig:
     params_learning_rate: float
     params_loss: str
     params_metrics: list
+
+
