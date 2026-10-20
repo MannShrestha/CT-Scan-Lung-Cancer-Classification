@@ -5,4 +5,8 @@ INCLUDE_TOP: False
 EPOCHS: 1
 CLASSES: 2    # Number of classes
 WEIGHTS: imagenet
-LEARNING_RATE: 0.01
+
+OPTIMIZER: Adam
+LEARNING_RATE: 0.001
+LOSS: categorical_crossentropy
+METRICS: [accuracy, precision, recall]
