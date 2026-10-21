@@ -40,3 +40,16 @@ class TrainingConfig:
     params_metrics: list
 
 
+
+@dataclass(frozen=True)
+class EvaluationConfig:
+    path_of_model: Path
+    training_data: Path
+    all_params: dict
+    mlflow_uri: str
+    params_image_size: list
+    params_batch_size: int
+    params_loss: str
+    params_optimizer: str
+    params_learning_rate: float
+    params_metrics: list

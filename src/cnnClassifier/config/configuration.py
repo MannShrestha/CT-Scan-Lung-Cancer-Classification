@@ -1,7 +1,7 @@
 import os
 from src.cnnClassifier.constants import *
 from src.cnnClassifier.utils.common import read_yaml, create_directories
-from src.cnnClassifier.entity.config_entity import (DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig)
+from src.cnnClassifier.entity.config_entity import (DataIngestionConfig, PrepareBaseModelConfig, TrainingConfig, EvaluationConfig)
 
 
 class ConfigurationManager:
@@ -80,3 +80,25 @@ class ConfigurationManager:
         )
 
         return training_config
+
+    
+
+    def get_evaluation_config(self) -> EvaluationConfig:
+        evaluation = self.config.evaluation
+
+        evaluation_config = EvaluationConfig(
+            path_of_model=Path(evaluation.path_of_model),
+            training_data=Path(self.config.data_ingestion.unzip_dir)/"Chest-CT-Scan-data",
+            mlflow_uri=evaluation.mlflow_uri,
+            all_params=dict(self.params),
+            params_image_size=self.params.IMAGE_SIZE,
+            params_batch_size=self.params.BATCH_SIZE,
+            params_loss=self.params.LOSS,
+            params_optimizer=self.params.OPTIMIZER,
+            params_learning_rate=self.params.LEARNING_RATE,
+            params_metrics=self.params.METRICS
+        )
+
+        return evaluation_config
+
+
