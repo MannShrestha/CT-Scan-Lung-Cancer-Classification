@@ -18,3 +18,25 @@
 8. Update the main.py
 9. Update the dvc.yaml
 
+
+# MLFlow
+- Documentation: https://mlflow.org/docs/latest/index.html
+
+*CMD*
+```bash
+mlflow ui
+```
+
+# Dagshub
+- Documentation: https://dagshub.com/
+
+```python
+import dagshub
+dagshub.init(repo_owner='MannShrestha', repo_name='CT-Scan-Lung-Cancer-Classification', mlflow=True)
+```
+
+# DVC cmd
+
+1. dvc init
+2. dvc repro
+3. dvc dag
