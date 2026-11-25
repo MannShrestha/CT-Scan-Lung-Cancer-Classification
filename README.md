@@ -4,6 +4,7 @@
 
 ![Cover](Images/Cancer.jpeg)
 
+
 ## Project Overview 
 
 Early detection of lung cancer significantly improves patient survival rates. This project implements a Deep Learning computer vision pipeline to classify chest Computed Tomography (CT) scans into four distinct categories: Adenocarcinoma, Large Cell Carcinoma, Squamous Cell Carcinoma, and Normal (Non-Cancerous).
