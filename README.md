@@ -2,8 +2,7 @@
 
 # CT-Scan-Lung-Cancer-Classification
 
-![Cover](Images/Cancer.jpeg)
-
+<img src="Images/Cancer.jpeg" alt="Alt Text for Image" width="500">
 
 ## Project Overview 
 
